@@ -77,7 +77,7 @@ if __name__ == '__main__':
         print("Нажмите 2 чтобы тестировать по метрики стандартным отклонением")
         print("Нажмите 3 чтобы тестировать по метрики средней квадратичной ошибки")
         print("Нажмите 4 чтобы выйти")
-        intp = input("> ")
+        intp = input(">")
         if intp == "1":
             test_word = input(">")
             print(find_word(test_word, corp_text, 1))
