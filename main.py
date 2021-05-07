@@ -26,6 +26,13 @@ def find_word(word: str, text: dict, errors: int) -> Union[list[str], str]:
     for i in text[len(word) + 1]:
         if method_hamming_distance(word.lower(), i) < errors:
             rez.append(i)
+    if len(rez) != 0:
+        return rez
+    else:
+        for index, items in corp_text.items():
+            for i in items:
+                if method_hamming_distance(word.lower(), i) < errors:
+                    rez.append(i)
     return rez
 
 
@@ -66,6 +73,7 @@ def mean_squared_error(answer: list, input: list):
         sum_error += (1 - y[i] ** 2)
     mean_error = sum_error / float(len(y))
     return mean_error
+
 
 
 if __name__ == '__main__':
