@@ -37,12 +37,11 @@ def find_word(word: str, text: dict, errors: int) -> Union[list[str], str]:
 
 
 def method_hamming_distance(word1: str, word2: str) -> int:
-    rez=0
-    for char1,char2, in zip(word1,word2):
-        if char1!=char2:
-            rez+=1
+    rez = 0
+    for char1, char2, in zip(word1, word2):
+        if char1 != char2:
+            rez += 1
     return rez
-
 
 
 def list_word(words: list, text: dict, errors: int):
@@ -78,7 +77,6 @@ def mean_squared_error(answer: list, input: list):
         sum_error += (1 - y[i] ** 2)
     mean_error = sum_error / float(len(y))
     return mean_error
-
 
 
 if __name__ == '__main__':
